@@ -21,13 +21,13 @@ particles = []
 for i in range(2):
     for j in range(2):
         for k in range(2):
-            position = np.array([i, j, k], dtype='float')
+            position = np.array([i + np.random.random(), j, k], dtype='float')
             position -= 0.5
             particles.append(position)
 
 particles = np.array(particles)
 velocities = np.zeros_like(particles)
-velocities = np.array([1.5, 0, 0])
+velocities = np.array([-1.5, 0.5, 0.0])
 alpha = 1
 rotateMatrix = np.array([[1 ,            0,              0],
                          [0, np.cos(alpha), -np.sin(alpha)],
@@ -138,6 +138,6 @@ def anim(i):
 
 ani = FuncAnimation(fig, anim,
                                frames=100000, interval=1, blit=False)
-# ani.save('rigid_body.gif')
+# ani.save('xpbd3.gif')
 plt.show()
 
