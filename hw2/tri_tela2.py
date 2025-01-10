@@ -7,6 +7,7 @@ from matplotlib.widgets import Slider
 
 # center_of_gravity = np.array([0., 2., 0.])
 # center_of_gravity2 = np.array([0., 6., 0.])
+# gsgsgs
 G = 1.
 dt = 0.01
 
